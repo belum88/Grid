@@ -40,6 +40,7 @@ header {
 header h1 {
   text-align: center;
   color: var(--primary-color);
+  text-transform: uppercase;
 }
 
 header .p {
@@ -59,6 +60,7 @@ main {
   align-items: center;
   text-align: center;
   color: var(--blue-color);
+  text-transform: uppercase;
 }
 footer {
   grid-area: footer;
@@ -102,4 +104,21 @@ footer button {
 .time {
   background-size: cover;
   background-position: center;
+}
+
+@media all and (max-width: 900px) {
+  body {
+    max-width: 100vw;
+    height: 2500px;
+    grid-template-areas:
+      "header"
+      "school"
+      "student"
+      "main"
+      "time"
+      "alumni"
+      "footer";
+    grid-template-columns: 1fr;
+    grid-template-rows: 2fr repeat(6, 1fr);
+  }
 }
